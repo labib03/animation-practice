@@ -1,0 +1,174 @@
+$text: #2e293c;
+$secondary: #a09da6;
+
+body {
+  font-family: poppins;
+}
+
+.testimonial-section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 900px;
+    height: 550px;
+    background: #f2f2f6;
+    right: 0;
+    bottom: 0;
+    opacity: 0.8;
+    z-index: -10;
+  }
+  .testimonial-container {
+    width: 56.25rem;
+    height: 400px;
+    position: relative;
+
+    .arrow {
+      position: absolute;
+      display: flex;
+      padding: 1rem;
+      align-items: center;
+      justify-content: center;
+      bottom: 50%;
+      transform: translateY(50%);
+      cursor: pointer;
+      border-radius: 8px;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        transform: translateY(20px);
+      }
+      &.right {
+        right: 0;
+      }
+    }
+
+    .testimonial-container_inner {
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .testimonial_image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 400px;
+        &:after {
+          content: "";
+          position: absolute;
+          width: 100px;
+          height: 100px;
+          background: #3f56da;
+          left: 20px;
+          top: -20px;
+          border-radius: 100%;
+          z-index: -9;
+        }
+        ul {
+          display: flex;
+          position: absolute;
+          overflow: hidden;
+          height: 380px;
+          width: 260px;
+          box-shadow: 0px 0px 40px rgba(0, 0, 10, 0.25);
+          li {
+            width: 100%;
+            height: 100%;
+            img {
+              max-width: 260px;
+              height: 100%;
+            }
+          }
+        }
+      }
+      .testimonial_content {
+        width: 500px;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        ul {
+          position: absolute;
+          overflow: hidden;
+          width: 500px;
+          height: 400px;
+          li {
+            width: 500px;
+            height: 400px;
+            color: $text;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            opacity: 0;
+            &:nth-child(1) {
+              opacity: 1;
+              &:after {
+                content: "";
+                position: absolute;
+                height: 7px;
+                width: 350px;
+                border-radius: 5px;
+                background: $text;
+                opacity: 0.3;
+                left: 0;
+                top: 205px;
+              }
+            }
+            &:nth-child(2) {
+              &:after {
+                content: "";
+                position: absolute;
+                height: 12px;
+                width: 148px;
+                background: $text;
+                opacity: 0.3;
+                left: 54px;
+                top: 126px;
+              }
+            }
+            &:nth-child(3) {
+              &:after {
+                content: "";
+                position: absolute;
+                height: 10px;
+                width: 150px;
+                background: $text;
+                opacity: 0.3;
+                left: 160px;
+                top: 169px;
+              }
+            }
+            .content_inner {
+              width: 500px;
+
+              .quote {
+                font-size: 26px;
+                letter-spacing: 0.88px;
+                line-height: 40px;
+                font-weight: 700;
+                margin-bottom: 16px;
+              }
+              .name {
+                font-size: 18px;
+                letter-spacing: 0.88px;
+                line-height: 28px;
+                color: $secondary;
+                font-weight: 600;
+              }
+              .title {
+                font-size: 18px;
+                letter-spacing: 0.88px;
+                line-height: 28px;
+                color: $secondary;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
